@@ -58,17 +58,15 @@ form input {
   width: 280px;
   height: 25px;
   padding: 0px 10px;
-  color: white;
   text-align: center;
   margin: 10px 60px 20px;
 }
 form button {
   width: 135px;
   margin: 20px 20px 30px 20px;
-  hight: 25px;
   background: #fffacd;
   border: 2px solid #f4a460;
-  color: fff;
+  color: black;
   box-shadow: 1px 3px 1px #fffacd;
   border-radius: 3px;
 }
@@ -80,10 +78,11 @@ form button:active {
 }
 h3 {
   text-align: center;
-  color: black;
+  color: #fffacd;
   font-weight: normal;
   font-size: 20px;
   margin: 20px 30px 20px 30px;
+
 }
 p {
   margin: 30px;
@@ -98,4 +97,181 @@ p {
 .recuperarcontraseña a {
   color: black;
    text-align: center;
+}
+
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+}
+body {
+  background-color: white;
+}
+.contenedor {
+  width: 80%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 90px;
+}
+h1 {
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #CCC;
+}
+form {
+  padding-top: 1rem;
+}
+form ul {
+  list-style: none;
+}
+/* Placehoder */
+::placeholder {
+  color: black;
+}
+/* Selección de texto dentro de los campo */
+::selection {
+  color: white;
+  background-color: green;
+}
+/* Los campos */
+input, output, button {
+  /* Para que el texto sea más pequeño */
+  font-size: .9rem;
+  /* Para que el texto no quede tan pegado al borde del input */
+  padding: .3rem;
+}
+/* Botones */
+button {
+  background: green;
+  box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.2);
+  padding: .5rem 1rem;
+  color: #DDD;
+  outline: none;
+  border: none;
+  cursor: pointer;
+} 
+button:hover {
+  box-shadow: inset 0 -4px 0 0 rgba(0, 0, 0, 0.6), 0 0 8px 0 rgba(0, 0, 0, 0.5);
+}
+button:active {
+  box-shadow: inset 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+/* Opciones */
+option {
+  font-size: .9rem;
+  padding: 5px 1rem;
+}
+/* Los inputs numéricos deben mostrar el texto alineado a la derecha */
+input[type="number"] {
+  text-align: right;
+}
+/* Los campos no válidos se muestran con el borde y el fondo de color rojo */ 
+:invalid:not(form) {
+  background-color: #FFEDED;
+  border: 1px solid red;
+  outline: none;
+}
+/* Cuando un input no válido recibe el foco se muestra una sombra roja */
+:invalid:focus {
+  box-shadow: 0 0 5px red;
+  outline: none;
+}
+/* Fila del formulario */
+.fila {
+  margin-bottom: 2rem;
+  /* Caja flexible con hijos formando filas */
+  display: flex;
+  flex-wrap: wrap;
+  /* Para que en cada fila se alinee verticalmente al centro */
+  align-items: center;
+  /* Para poder posicionar los mensajes de error de forma absoluta respecto a la fila */
+  position:relative;
+}
+/* Labels de propiedades */
+.propiedad {
+ 
+  min-width: 50%;
+  text-align: left;
+  padding-left: 1rem;
+   order: -1;
+}
+:focus ~ .propiedad,
+:active ~ .propiedad {
+  font-weight: bold;
+}
+:valid:focus:not(:placeholder-shown) ~ .propiedad,
+.fila :valid:active:not(:placeholder-shown) ~ .propiedad {
+  color: green;
+}
+.fila :invalid:focus ~ .propiedad,
+.fila :invalid:active ~ .propiedad {
+  color: red;
+}
+
+.fila > *:not(.propiedad) {
+  margin-left: -20rem; 
+}
+
+.fila select[multiple] ~ .propiedad {
+  align-self: flex-start;
+}
+
+
+
+.small {
+  width: 50rem;
+}
+:required:valid:not(:placeholder-shown) ~ .propiedad:before,
+input[type="email"]:valid:not(:placeholder-shown) ~ .propiedad:before,
+input[type="tel"]:valid:not(:placeholder-shown) ~ .propiedad:before {
+  content: "\2713";
+  color: green;
+  vertical-align: middle;
+  display: inline;
+  padding-right: .60rem;
+}
+:invalid ~ .propiedad:before {
+  content: "\26A0";
+  color: red;
+  vertical-align: middle;
+  display: inline;
+  padding-right: .60rem;
+}
+:invalid ~ .propiedad:after {
+  content: "Campo obligatorio";
+  color: red;
+  font-size: .8rem;
+  position: absolute;
+  top: 100%;
+  left: 26%;;
+}
+:required:invalid ~ .propiedad:after {
+  content:"Campo obligatorio"
+   ;}
+
+input[type="email"]:invalid ~ .propiedad:after {
+  content:"El email debe llevar @ y .";
+}
+input[type="tel"]:invalid ~ .propiedad:after {
+  content:"El teléfono debe ser numérico, contener  9 dígitos y comenzar por 3,4,5";
+}
+
+@media (max-width: 200px) { 
+  .fila {
+    justify-content: flex-start;
+  }
+  .fila .propiedad {
+    flex-basis: 5%;
+    margin-bottom: .3rem;
+  }
+  :invalid ~ .propiedad:after {
+    left: 0%;  
+  }
 }
