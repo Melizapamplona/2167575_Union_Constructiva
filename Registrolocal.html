@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body>
+  <div class="contenedor" class="header"> <img src="Imagenes/ImagenLOGO.jpeg" alt="Logo Union_Constructiva" width="150px"
+    height="150px" style="float:left;">
+    <h1>Perfil de Depósito/Ferretería</h1>
+        <form action="" style="width: auto;" id="formulario">
+      <ul>
+        <li class="fila">
+          <input type="text" id="nombrelocal" name="fullnamelocal" maxlength="30" size="30" placeholder="Nombre del Depósito/Ferreteía"
+            required="required" autofocus="autofocus" />
+          <label for="nombre" class="propiedad">Nombre del Depósito/Ferreteía:</label>
+
+          <li class="fila">
+            <input type="text" id="nombreencargado" name="fullnameencargado" maxlength="30" size="30" placeholder="Nombres del encargado"
+              required="required" autofocus="autofocus" />
+            <label for="nombre" class="propiedad">Nombres del encargado:</label>
+
+          <input type="hidden" id="codigo" name="code" value="25" />
+        </li>
+        <li class="fila">
+          <input type="text" id="Apellidoencargado" name="fullapellidoencargado" maxlength="30" size="30" placeholder="Apellidos del encargado"
+            required="required" autofocus="autofocus" />
+          <label for="nombre" class="propiedad">Apellidos del encargado:</label>
+        </li>
+
+            
+
+        <li class="fila">
+          <select id="Tipodedocumento" name="document" required="required">
+            <option value="">- Seleccione -</option>
+            <option value="Cedula">Cedula de ciudadania</option>
+            <option value="Pasaporte">Pasaporte</option>
+            <option value="NIT">NIT</option>
+          </select>
+          <label for="document" class="propiedad">Tipo de documento:</label>
+        </li>
+
+        <li class="fila">
+          <input type="text" id="Numerodocumento" name="Numerodocumento" maxlength="30" size="30"
+            placeholder="Numero de documento" required="required" autofocus="autofocus" />
+          <label for="Numero de documento" class="propiedad">Numero de documento:</label>
+        </li>
+
+        <li class="fila">
+            <input type="text" id="numeronit" name="numeronit" maxlength="30" size="30" placeholder="Número NIT"
+              required="required" />
+            <label for="Número NIT" class="propiedad">Número NIT:</label>
+          </li>
+
+        
+        <li class="fila">
+          <input type="tel" id="direccion" name="direccion" maxlength="9" size="11" placeholder="Teléfono"
+            pattern="[0-9]{9}" required="required">
+          <label for="telefono" class="propiedad">Teléfono:</label>
+        </li>
+
+        <li class="fila">
+          <input type="number" id="telefonocelular" name="celnumero" maxlength="10" size="11"
+            placeholder="Teléfono celular"style="text-align: center">
+          <label  for="telefono" class="propiedad"> Teléfono celular:</label>
+        </li>
+
+        <li class="fila">
+            <input type="text" id="Numerodocumento" name="Numerodocumento" maxlength="30" size="30"
+              placeholder="Dirección" required="required" autofocus="autofocus" />
+            <label for="Dirección" class="propiedad">Dirección::</label>
+          </li>
+
+
+        <li class="fila">
+          <input type="email" id="email" name="email" maxlength="30" size="30" placeholder="Email"
+            required="required" />
+          <label for="email" class="propiedad">Email:</label>
+        </li>
+
+        <li>
+          <button type="submit">Guardar</button>
+          <button type="text" style="float: right;"  onclick="location.href='index.html'">Cancelar</button>
+        </li>
+      </ul>
+    </form>
+  </div>
+</body>
+
+</html>
