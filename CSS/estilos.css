@@ -275,3 +275,56 @@ input[type="tel"]:invalid ~ .propiedad:after {
     left: 0%;  
   }
 }
+
+table {
+  width: 500px;
+  margin: 0px;
+  background: #FFFFFF;
+  border: 1px solid #333333;
+  border-collapse: collapse;
+ }
+
+ .body-GPS {
+   float: left;
+   width: 1300px;
+ }
+
+ header{
+  font-family: Helvetica;
+  /* width: 480px; */
+  margin: 0 auto;
+  float: right;
+  margin-right: 150px;
+}
+
+#menu ul {
+  list-style: none;
+}
+
+#menu li>a{
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));;
+  color: -internal-light-dark(black, white);;
+  padding: 4px;
+  display: block;
+  text-decoration: none;
+  min-width: 100px;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  background: #EFEFEF;
+}
+#menu li>a:hover{
+  color: #000;
+  background-color: #eaeaea;
+}
+#menu>li{
+  float: left;
+  text-align:center
+}
+#menu>li>ul{
+  display: none;
+}
+#menu>li:hover>ul {
+  display:block;
+}

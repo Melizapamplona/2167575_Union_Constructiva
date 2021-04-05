@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Union_Constructiva</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <li><a href="">Depósitos y/o ferreterías</a>
+                    <ul>
+                        <li><a href="">Crear</a></li>
+                        <li><a href="">Modificar</a></li>
+                        <li><a href="">Eliminar</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="grid-container">
+        <div class="header"> <img src="Imagenes/ImagenLOGO.jpeg" alt="Logo Union_Constructiva" width="150px"
+                height="150px" style="float:left;">
+
+            <input id="btn_Buscar" name="btn_Buscar" type="button" value="Buscar" style="float:left;">
+            <input type="text" id="txtBuscar" style="float:left;" />
+            <input id="btn_cerrarSesion" name="btn_cerrarSesion" type="button" value="Cerrar sesión"
+                style="float: right;" onclick="location.href='index.html'">
+
+        </div>
+        <div class="nav">
+            <h1>Nuestras ofertas para ti</h1>
+            <nav>
+                <a href="#Oferta1" class="active"><img src="Imagenes/oferta1.jpg" alt="oferta1" width="150px"
+                        height="150px" style="float:left;"> </a>
+                <a href="#Oferta2"><img src="Imagenes/oferta2.jpg" alt="oferta2" width="150px" height="150px"
+                        style="float:left;"> </a>
+                <a href="#Oferta3"><img src="Imagenes/oferta3.jpg" alt="oferta3" width="150px" height="150px"
+                        style="float:left;"> </a>
+                <a href="#Oferta4"><img src="Imagenes/oferta4.jpg" alt="oferta4" width="150px" height="150px"
+                        style="float:left;"> </a>
+                <a href="#Oferta1" class="active"><img src="Imagenes/oferta5.jpg" alt="oferta5" width="150px"
+                        height="150px" style="float:left;"> </a>
+                <a href="#Oferta2"><img src="Imagenes/oferta6.jpg" alt="oferta6" width="150px" height="150px"
+                        style="float:left;"> </a>
+                <a href="#Oferta3"><img src="Imagenes/oferta7.jpg" alt="oferta7" width="150px" height="150px"
+                        style="float:left;"> </a>
+                <a href="#Oferta3"><img src="Imagenes/oferta8.jpg" alt="oferta8" width="150px" height="150px"
+                        style="float:left;"> </a>
+
+            </nav>
+        </div>
+        <div class="body-GPS">
+            <h2>Busca tu Ferretería/Depósito mas cercano según tu ubicación</h2>
+
+            <body>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10723.837590043746!2d-75.56056059079877!3d6.340616230934573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1615861799589!5m2!1ses!2sco"
+                    width="780" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+                <table align="right" width="500">
+                    <caption>
+                        <strong>Búsquedas recientes</strong>
+                        <p>A continuación encontrarás los últimos depósitos y/o ferreterías buscados</p>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre Depositó/Ferretería</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> <a href=""> FerreHogar</a></td>
+                        </tr>
+                        <tr>
+                            <td> <a href="">Depósito el abuelo</a></td>
+                        </tr>
+                        <tr>
+                            <td> <a href="">Depósito popular 1</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </body>
+        </div>
+        <div class="footer">
+            <footer>
+                <div>
+                    <p>© 2021 <strong>Union_Constructiva</strong> Todos los derechos reservado </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
